@@ -1,0 +1,6 @@
+@DMV.WebAPI_HostAddress = http://localhost:5151
+
+GET {{DMV.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

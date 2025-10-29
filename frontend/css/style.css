@@ -1,0 +1,124 @@
+/*general styling*/
+:root {
+  --bg: #0a0a0a;
+  --text: #fafafa;
+  --accent: #8e51ff;
+  --dark-accent: #1c1922;
+  --muted-fg: #a1a1a1;
+  --muted-bg: #171717;
+  --border: #2e2e2e;
+  --card-width: 400px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  background-color: var(--bg);
+  color: var(--text);
+}
+html,
+body {
+  height: 100%;
+}
+/*navbar styling*/
+.navbar {
+  display: flex;
+  justify-content: center;
+  height: 72px;
+}
+.navbar a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 6px;
+  margin: 20px;
+  font-weight: bold;
+}
+.navbar a:hover {
+  background-color: var(--border);
+  border-radius: 4px;
+}
+
+/*settings page styling*/
+.settings-cards-container {
+  min-height: calc(100vh - 72px); /* subtract navbar height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.card-row {
+  display: flex;
+  gap: 16px;
+}
+.card {
+  padding: 20px;
+  width: var(--card-width);
+  background-color: var(--muted-bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+.card-title {
+  font-size: 13px;
+}
+.card-links {
+  display: flex;
+  flex-direction: column;
+}
+/*login page styling*/
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login-card {
+  padding: 20px;
+  width: var(--card-width);
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.login-card-child {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.input-box {
+  background-color: var(--muted-bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--muted-fg);
+  padding: 10px;
+  outline: none;
+}
+.input-box:focus {
+  border-color: var(--accent);
+  color: var(--text);
+}
+.login-card-child:focus-within .input-label{
+  color: var(--text);
+}
+.input-label {
+  color: var(--muted-fg);
+}
+.btn {
+  font-size: medium;
+  padding: 10px;
+  outline: none;
+  background-color: var(--accent);
+  border-radius: 4px;
+  border: 1px solid var(--dark-accent);
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: var(--bg);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
